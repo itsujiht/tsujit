@@ -12,8 +12,8 @@ export default function IllustPage() {
                 <div className='illust-list'>
                     {
                         images.map((image, index) => (
-                            <Link href={'/illust' + '/'+ index}>
-                                <Image key={ index } src={ imgsrcs[index] } alt={ image.alt } style={{ cursor:'pointer' }}/>
+                            <Link href={'/illust' + '/'+ index} key={ index }>
+                                <Image src={ imgsrcs[index] } alt={ image.alt } style={{ cursor:'pointer' }}/>
                             </Link>
                         ))
                     }
