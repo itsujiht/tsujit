@@ -18,7 +18,7 @@ export default function DetailPicture({ params }: { params: { picid: number } })
                     <p>{ images[picid].description }</p>
                     <p style={{ color: '#a0a0a0' }}>Date: { images[picid].date }</p>
                     <div className='illust-card-share'>
-                        <ShareButton text={ images[picid].title + ' on pixseep' } url={ 'https://ne-doko.vercel.app/illust' + '/' + picid } />
+                        <ShareButton text={ images[picid].title + ' on pixheep' } url={ 'https://ne-doko.vercel.app/illust' + '/' + picid } />
                     </div>
                 </div>
             </div>
