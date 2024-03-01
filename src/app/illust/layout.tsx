@@ -3,7 +3,7 @@ import '@/app/globals.css';
 
 export const metadata: Metadata = {
     title: "illust - eep",
-    description: "illustration of nemusheep",
+    description: "illustration of nemuSheep",
   };
   
 export default function IllustLayout({

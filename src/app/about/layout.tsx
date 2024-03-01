@@ -3,7 +3,7 @@ import '@/app/globals.css';
 
 export const metadata: Metadata = {
     title: "about - eep",
-    description: "about nemusheep",
+    description: "about nemuSheep",
   };
   
 export default function AboutLayout({
