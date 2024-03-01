@@ -4,6 +4,21 @@ import '@/app/globals.css';
 export const metadata: Metadata = {
     title: "illust - eep",
     description: "illustration of nemuSheep",
+    openGraph: {
+        title: 'illust - eep',
+        description: 'illustration of nemuSheep',
+        url: 'https://ne-doko.vercel.app/illust',
+        siteName: 'ne-doko',
+        locale: 'ja_JP',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'illust - eep',
+        description: 'illustration of nemuSheep',
+        site: '@mesheep_sleep',
+        creator: '@mesheep_sleep',
+    },
   };
   
 export default function IllustLayout({
