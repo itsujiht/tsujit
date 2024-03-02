@@ -1,7 +1,7 @@
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { images, imgsrcs } from '@/contents/illustration/images';
+import { images } from '@/contents/illustration/images';
 
 export default function IllustPage() {
 
@@ -12,7 +12,7 @@ export default function IllustPage() {
                         images.map((image, index) => (
                             <div key={ index }>
                                 <Link href={'/illust' + '/'+ index}>
-                                    <Image src={ imgsrcs[index] } alt={ image.alt } style={{ cursor:'pointer' }}/>
+                                    <Image src={ image.src } alt={ image.alt } style={{ cursor:'pointer' }}/>
                                 </Link>
                             </div>
                         ))

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { images, imgsrcs } from '@/contents/illustration/images';
+import { images } from '@/contents/illustration/images';
 import '@/app/globals.css';
 
 export async function generateMetadata({ params }: { params: {picid: number}}): Promise<Metadata> {

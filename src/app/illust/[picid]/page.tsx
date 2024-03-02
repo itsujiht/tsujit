@@ -2,7 +2,7 @@ import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import ShareButton from '@/components/ShareButton';
-import { images, imgsrcs } from '@/contents/illustration/images';
+import { images } from '@/contents/illustration/images';
 
 export default function DetailPicture({ params }: { params: { picid: number } }) {
     const picid = params.picid;
@@ -11,7 +11,7 @@ export default function DetailPicture({ params }: { params: { picid: number } })
         <div className='card-container'>
             <div className='illust-card'>
                 <Link href='/illust'>
-                    <Image src={ imgsrcs[picid] } alt={ images[picid].alt } style={{ cursor: 'pointer' }} priority={true}/>
+                    <Image src={ images[picid].src } alt={ images[picid].alt } style={{ cursor: 'pointer' }} priority={true}/>
                 </Link>
                 <div className='illust-card-content'>
                     <h2>{ images[picid].title }</h2>
