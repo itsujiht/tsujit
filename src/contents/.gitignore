@@ -1,0 +1,5 @@
+# exclude obsidian settings
+.obsidian/
+
+# os settings
+.DS_Store

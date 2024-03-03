@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
   };
   
-export default function AboutLayout({
+export default function BlogLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
