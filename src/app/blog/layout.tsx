@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: "blog of nemusheep",
     openGraph: {
         title: 'blog - eep',
-        description: 'blog of nemuSheep',
+        description: 'webblog of nemuSheep',
         url: 'https://ne-doko.vercel.app/blog',
         siteName: 'ne-doko',
         locale: 'ja_JP',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary',
         title: 'blog - eep',
-        description: 'blog of nemuSheep',
+        description: 'webblog of nemuSheep',
         site: '@mesheep_sleep',
         creator: '@mesheep_sleep',
     },
