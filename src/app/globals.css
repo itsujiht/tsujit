@@ -254,7 +254,8 @@ a {
 }
 
 .App-about p {
-  margin: 0 0 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .about-title {
