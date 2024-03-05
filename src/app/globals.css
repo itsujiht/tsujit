@@ -267,11 +267,6 @@ a {
   border-bottom: 2px dotted #515151;
 }
 
-.about-content h1 {
-  align-items: baseline;
-  font-size: 35px;
-}
-
 .about-content h1::before {
   content: '◇';
   position: relative;
@@ -345,7 +340,64 @@ a {
 .blog-date p {
   color: #777;
   text-align: right;
-  margin: 0 10px 10px 10px;
+  margin: 0 15px 10px 10px;
+}
+
+.blog-intro h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-intro p {
+  text-align: right;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 2px dotted #515151;
+}
+
+.blog-content h1::before {
+  content: '◇';
+  position: relative;
+  margin-right: 10px;
+}
+
+.blog-content h2::before {
+  content: '◇';
+  position: relative;
+  margin-right: 10px;
+}
+
+.blog-content h3::before {
+  content: '◇';
+  position: relative;
+  margin-right: 10px;
+}
+
+.blog-content ul {
+  list-style-position: inside;
+}
+
+.blog-content li {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.blog-content code {
+  background-color: #f1f1f1;
+  font-size: 16px;
+}
+
+.blog-content blockquote {
+  padding-left: 1em;
+  border-left: 5px solid #aaa;
+}
+
+.blog-content a {
+  color: #332f38;
+}
+
+.blog-content a:hover {
+  color: #8b8196;
 }
 
 .image-sheep {

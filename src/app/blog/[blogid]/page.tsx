@@ -5,6 +5,11 @@ import { marked } from 'marked';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 
+function formatDate(date: Date) {
+    const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
+
 export default async function Post({ params }: { params: { blogid: string } }){
     const blogid = decodeURIComponent(params.blogid);
     const filePath = fs.existsSync(path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.md`)) ? path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.md`) : path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.mdx`);
@@ -22,8 +27,9 @@ export default async function Post({ params }: { params: { blogid: string } }){
 
     return (
         <div className='App-blog'>
-            <div className='blog-title'>
+            <div className='blog-intro'>
                 <h1>{data.title}</h1>
+                <p>{formatDate(data.date)}</p>
             </div>
             <div className='blog-content'>
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
