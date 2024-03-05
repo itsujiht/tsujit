@@ -3,12 +3,29 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import Image from 'next/image';
 import '@/app/globals.css';
 
 function formatDate(date: Date) {
     const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
+
+const components = {
+    img: (props: any) => {
+        return (
+          <Image src={props.src}
+            alt={props.alt}
+            width={props.width}
+            height={props.height}
+            layout="responsive"
+            objectFit='contain'
+          />
+        )
+      },
+    //ここに使うコンポーネントを手動で足す他ないのか？
+  };
 
 export default async function Post({ params }: { params: { blogid: string } }){
     const blogid = decodeURIComponent(params.blogid);
@@ -23,8 +40,8 @@ export default async function Post({ params }: { params: { blogid: string } }){
     const post = fs.readFileSync(filePath, 'utf-8');
     
     const { data, content } = matter(post);
-    const htmlContent = marked(content);
 
+    const htmlContent = marked(content);
     return (
         <div className='App-blog'>
             <div className='blog-intro'>
@@ -32,7 +49,11 @@ export default async function Post({ params }: { params: { blogid: string } }){
                 <p>{formatDate(data.date)}</p>
             </div>
             <div className='blog-content'>
-                <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+            {
+                path.extname(filePath) === '.md' ?
+                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> :
+                    <MDXRemote source={content} components={components}/>
+            }
             </div>
         </div>
     );

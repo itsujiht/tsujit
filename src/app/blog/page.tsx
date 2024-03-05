@@ -11,6 +11,9 @@ interface postData {
 
 function formatDate(date: Date) {
     const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
+    if (date === undefined) {
+        return '';
+    }
     return date.toLocaleDateString('en-US', options);
 }
 
@@ -21,15 +24,18 @@ export default async function BlogHome() {
     const posts: postData[] = [];
 
     fileNames.forEach(fileName => {
-        const filePath = path.join(dirPath, fileName);
-        const post = fs.readFileSync(filePath, 'utf-8');
-        
-        const { data } = matter(post);
+        if (fileName !== '.DS_Store'){
+            const filePath = path.join(dirPath, fileName);
+            const post = fs.readFileSync(filePath, 'utf-8');
+            
+            const { data } = matter(post);
+            const { name } = path.parse(fileName);
 
-        posts.push({
-            data: data,
-            blogid: fileName.split('.')[0],
-        });
+            posts.push({
+                data: data,
+                blogid: name,
+            });
+        }
     });
 
     posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
