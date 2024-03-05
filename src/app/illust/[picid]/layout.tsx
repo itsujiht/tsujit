@@ -2,8 +2,12 @@ import type { Metadata } from 'next';
 import { images } from '@/contents/illustration/images';
 import '@/app/globals.css';
 
-export async function generateMetadata({ params }: { params: {picid: number}}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: {picid: number}}): Promise<Metadata | undefined> {
     const picid = params.picid;
+
+    if (images[picid] === undefined) {
+        return undefined;
+    }
 
     const metadata: Metadata = {
         title: images[picid].title + ' - eep',

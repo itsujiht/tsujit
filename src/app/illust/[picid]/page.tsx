@@ -3,9 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ShareButton from '@/components/ShareButton';
 import { images } from '@/contents/illustration/images';
+import { notFound } from 'next/navigation';
 
 export default function DetailPicture({ params }: { params: { picid: number } }) {
     const picid = params.picid;
+
+    if (images[picid] === undefined) {
+        return notFound();
+    }
 
     return (
         <div className='card-container'>

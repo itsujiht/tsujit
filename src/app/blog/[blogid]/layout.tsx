@@ -4,11 +4,18 @@ import path from 'path';
 import matter from 'gray-matter';
 import '@/app/globals.css';
 
-export async function generateMetadata({ params }: { params: {blogid: string}}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: {blogid: string}}): Promise<Metadata | undefined> {
     const blogid = decodeURIComponent(params.blogid);
     const filePath = fs.existsSync(path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.md`)) ? path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.md`) : path.join(process.cwd(), 'src', 'contents', 'blog', `${blogid}.mdx`);
+
+    try {
+        fs.accessSync(filePath, fs.constants.R_OK);
+    } catch (error) {
+        return undefined;
+    }
+
     const post = fs.readFileSync(filePath, 'utf-8');
-    
+
     const { data } = matter(post);
 
     const metadata: Metadata = {
