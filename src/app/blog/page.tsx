@@ -36,16 +36,23 @@ export default async function BlogHome() {
 
     return (
         <div className='App-blog'>
-            {
-                posts.map((post, index) => (
-                    <Link key={ index } href={ '/blog' + '/' + `${post.blogid}` } >
-                        <div className='blog-card'>
-                            <h2>{post.data.title}</h2>
-                            <p>{formatDate(post.data.date)}</p>
+            <div className='blog-container'>
+                {
+                    posts.map((post, index) => (
+                        <div key={ index } className='blog-card'>
+                            <Link href={ '/blog' + '/' + `${post.blogid}`}>
+                                <h2>{post.data.title}</h2>
+                                <div className='blog-description'>
+                                    <p>{post.data.description}</p>
+                                </div>
+                                <div className='blog-date'>
+                                    <p>{formatDate(post.data.date)}</p>
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
-                ))
-            }
+                    ))
+                }
+            </div>
         </div>
     );
 }
