@@ -24,13 +24,13 @@ export default async function BlogHome() {
     const posts: postData[] = [];
 
     fileNames.forEach(fileName => {
-        if (fileName !== '.DS_Store'){
-            const filePath = path.join(dirPath, fileName);
-            const post = fs.readFileSync(filePath, 'utf-8');
-            
-            const { data } = matter(post);
-            const { name } = path.parse(fileName);
+        const filePath = path.join(dirPath, fileName);
+        const post = fs.readFileSync(filePath, 'utf-8');
+        
+        const { data } = matter(post);
+        const { name, ext } = path.parse(fileName);
 
+        if(ext === '.md' || ext === '.mdx'){
             posts.push({
                 data: data,
                 blogid: name,
