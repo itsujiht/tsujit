@@ -17,8 +17,14 @@
     "marked": "^12.0.0",
     "next": "14.1.0",
     "next-mdx-remote": "^4.4.1",
+    "playwright-core": "^1.42.1",
+    "puppeteer": "^22.4.0",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-mermaid": "^2.1.0",
+    "remark": "^15.0.1",
+    "remark-mermaid": "^0.2.0",
+    "remark-mermaidjs": "^6.0.0",
     "temporal-polyfill": "^0.2.3"
   },
   "devDependencies": {

@@ -105,6 +105,10 @@ a {
   }
 }
 
+span {
+  display: inline-block;
+}
+
 .home-logo {
   height: 5vmin;
   width: auto;

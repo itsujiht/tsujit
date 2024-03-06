@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { marked } from 'marked';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
@@ -41,7 +40,6 @@ export default async function Post({ params }: { params: { blogid: string } }){
     
     const { data, content } = matter(post);
 
-    const htmlContent = marked(content);
     return (
         <div className='App-blog'>
             <div className='blog-intro'>
@@ -49,11 +47,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
                 <p>{formatDate(data.date)}</p>
             </div>
             <div className='blog-content'>
-            {
-                path.extname(filePath) === '.md' ?
-                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> :
-                    <MDXRemote source={content} components={components}/>
-            }
+                <MDXRemote source={content} components={components}/>
             </div>
         </div>
     );

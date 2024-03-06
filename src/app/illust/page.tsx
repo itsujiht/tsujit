@@ -7,17 +7,17 @@ export default function IllustPage() {
 
     return (
         <div className='card-container'>
-                <div className='illust-list'>
-                    {
-                        images.map((image, index) => (
-                            <div key={ index }>
-                                <Link href={'/illust' + '/'+ index}>
-                                    <Image src={ image.src } alt={ image.alt } style={{ cursor:'pointer' }}/>
-                                </Link>
-                            </div>
-                        ))
-                    }
-                </div>
+            <div className='illust-list'>
+                {
+                    images.map((image, index) => (
+                        <div key={ index }>
+                            <Link href={'/illust' + '/'+ index}>
+                                <Image src={ image.src } alt={ image.alt } style={{ cursor:'pointer' }}/>
+                            </Link>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     );
 }
