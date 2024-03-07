@@ -1,4 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import remarkMermaid from 'remark-mermaidjs';
+import createMDX from '@next/mdx';
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+    reactStrictMode: true,
+    pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+};
+
+const withMDX = createMDX({
+    options: {
+        remarkPlugins: [remarkMermaid],
+        rehypePlugins: [],
+    },
+});
+
+export default withMDX(nextConfig);

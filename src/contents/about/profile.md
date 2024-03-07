@@ -45,4 +45,5 @@ description: about me
 - Twitter(絵) : [`@myn_Mei`](https://twitter.com/myn_Mei)
 - pixiv : [`68447218`](https://www.pixiv.net/users/68447218)
 - pixivFANBOX : [`mesheep`](https://mesheep.fanbox.cc)
+- Discord : `nmsheep`
 

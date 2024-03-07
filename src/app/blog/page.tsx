@@ -46,7 +46,7 @@ export default async function BlogHome() {
                 {
                     posts.map((post, index) => (
                         <div key={ index } className='blog-card'>
-                            <Link href={ '/blog' + '/' + `${post.blogid}`}>
+                            <Link href={ '/blog/post' + '/' + `${post.blogid}`}>
                                 <h2>{post.data.title}</h2>
                                 <div className='blog-description'>
                                     <p>{post.data.description}</p>

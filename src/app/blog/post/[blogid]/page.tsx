@@ -47,7 +47,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
                 <p>{formatDate(data.date)}</p>
             </div>
             <div className='blog-content'>
-                <MDXRemote source={content} components={components}/>
+                <MDXRemote source={content} components={components} />
             </div>
         </div>
     );

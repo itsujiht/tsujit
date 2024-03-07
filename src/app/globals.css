@@ -271,16 +271,28 @@ span {
   border-bottom: 2px dotted #515151;
 }
 
+.about-content h1 {
+  border-bottom: 2px dotted #ddd;
+}
+
 .about-content h1::before {
   content: '◇';
   position: relative;
   margin-right: 10px;
 }
 
+.about-content h2 {
+  border-bottom: 2px dotted #ddd;
+}
+
 .about-content h2::before {
   content: '◇';
   position: relative;
   margin-right: 10px;
+}
+
+.about-content h3 {
+  border-bottom: 2px dotted #ddd;
 }
 
 .about-content h3::before {
@@ -314,18 +326,16 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 .blog-card {
-  width: 95%;
+  width: 100%;
   margin: 10px;
   background-color: #fff;
   color: #000;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  box-shadow: 5px 5px 0 0 #bcb5c4;
+  border: 1px dotted #e1e1e1;
+  box-shadow: 5px 5px 0 0 #c7bcd3;
 }
 
 .blog-card:hover {
@@ -333,16 +343,21 @@ span {
 }
 
 .blog-card h2 {
-  font-size: 25px;
-  margin: 15px 5px 5px 5px;
+  white-space: normal;
+  font-size: 23px;
+  margin: 20px 15px 10px 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px dotted #ddd;
 }
 
 .blog-description p {
-  margin: 5px 5px 0 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 15px 0 15px;
 }
 
 .blog-date p {
-  color: #777;
+  color: #999;
   text-align: right;
   margin: 0 15px 10px 10px;
 }
@@ -359,16 +374,31 @@ span {
   border-bottom: 2px dotted #515151;
 }
 
+.blog-content h1 {
+  padding-bottom: 0.3em;
+  border-bottom: 2px dotted #ddd;
+}
+
 .blog-content h1::before {
   content: '◇';
   position: relative;
   margin-right: 10px;
 }
 
+.blog-content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 2px dotted #ddd;
+}
+
 .blog-content h2::before {
   content: '◇';
   position: relative;
   margin-right: 10px;
+}
+
+.blog-content h3 {
+  padding-bottom: 0.3em;
+  border-bottom: 2px dotted #ddd;
 }
 
 .blog-content h3::before {
