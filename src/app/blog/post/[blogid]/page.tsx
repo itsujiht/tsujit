@@ -33,7 +33,9 @@ const components = {
     },
     Tweet: (props: any) => {
         return (
-            <Tweet id={props.id}/>
+            <div className='tweet'>
+                <Tweet id={props.id}/>
+            </div>
         )
     },
     Script: (props: any) => {

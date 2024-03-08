@@ -213,6 +213,7 @@ span {
 
 .tweet {
   width: 85%;
+  max-width: 551px;
   height: auto;
   margin: 20px auto 20px auto;
 }
