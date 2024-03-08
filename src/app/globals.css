@@ -189,7 +189,7 @@ span {
 }
 
 .App-main {
-  margin: 60px 5% 40px;
+  margin: 70px 5% 30px;
 }
 
 .App-main a:link {
@@ -325,11 +325,15 @@ span {
   background-color: #ffffff;
   line-height: 30px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 113.5px * 2);
 }
 
 .blog-container {
   width: 95%;
-  margin: auto;
+  max-width: 600px;
+  margin: 10px auto 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -371,6 +375,57 @@ span {
   color: #999;
   text-align: right;
   margin: 10px 15px 10px 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: auto auto 0px;
+  margin-top: auto;
+}
+
+.pagination-link {
+  display: inline-block;
+  height: 40px;
+  min-width: 40px;
+  line-height: 39px;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #58545a;
+  color: #58545a !important;
+  background-color: #fffbff;
+  margin: 10px 2px 10px 2px;
+}
+
+.pagination-link:hover {
+  background-color: #ede4ed;
+}
+
+.current-pagination-link {
+  display: inline-block;
+  height: 40px;
+  min-width: 40px;
+  line-height: 39px;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #58545a;
+  color: #ffffff !important;
+  background-color: #58545a;
+  margin: 10px 2px 10px 2px;
+}
+
+.abbreviation {
+  min-width: 40px;
+  padding: 0;
+  text-align: center;
+  color: #58545a;
+  margin: 0px 2px 0px 2px;
 }
 
 .blog-intro h1 {

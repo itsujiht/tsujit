@@ -15,7 +15,7 @@ function Header() {
                     <Link href='/about'>About</Link>
                 </div>
                 <div className='menu-item'>
-                    <Link href='/blog'>Blog</Link>
+                    <Link href='/blog/1'>Blog</Link>
                 </div>
                 <div className='menu-item'>
                     <Link href='/illust'>Illust</Link>

@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import ShareButton from '@/components/ShareButton';
+import Script from "next/script";
+import { Tweet } from '@/components/Tweet';
 import '@/app/globals.css';
 
 function formatDate(date: Date, isUS: boolean) {
@@ -29,6 +31,18 @@ const components = {
             />
         )
     },
+    Tweet: (props: any) => {
+        return (
+            <Tweet id={props.id}/>
+        )
+    },
+    Script: (props: any) => {
+        return (
+            <Script src={props.src}
+                strategy={props.strategy}
+            />
+        )
+    }
     //LinkcardとかCodeblockとか作りたい
 };
 
