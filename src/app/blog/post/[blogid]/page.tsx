@@ -4,27 +4,33 @@ import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
+import ShareButton from '@/components/ShareButton';
 import '@/app/globals.css';
 
-function formatDate(date: Date) {
-    const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
+function formatDate(date: Date, isUS: boolean) {
+    if (isUS) {
+        const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    } else {
+        const options: Intl.DateTimeFormatOptions = { month: '2-digit', day: '2-digit', year: 'numeric' };
+        return date.toLocaleDateString('ja-JP', options);
+    }
 }
 
 const components = {
     img: (props: any) => {
         return (
-          <Image src={props.src}
-            alt={props.alt}
-            width={props.width}
-            height={props.height}
-            layout="responsive"
-            objectFit='contain'
-          />
+            <Image src={props.src}
+                alt={props.alt}
+                layout="responsive"
+                objectFit='contain'
+                style={{width: props.width,
+                    height: props.height}}
+            />
         )
-      },
-    //ここに使うコンポーネントを手動で足す他ないのか？
-  };
+    },
+    //LinkcardとかCodeblockとか作りたい
+};
 
 export default async function Post({ params }: { params: { blogid: string } }){
     const blogid = decodeURIComponent(params.blogid);
@@ -44,10 +50,14 @@ export default async function Post({ params }: { params: { blogid: string } }){
         <div className='App-blog'>
             <div className='blog-intro'>
                 <h1>{data.title}</h1>
-                <p>{formatDate(data.date)}</p>
+                <p>{formatDate(data.date, true)}</p>
             </div>
             <div className='blog-content'>
                 <MDXRemote source={content} components={components} />
+            </div>
+            <div className='blog-outro'>
+                <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
+                <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
             </div>
         </div>
     );

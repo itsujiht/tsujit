@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: {blogid: string}}):
         openGraph: {
             title: data.title + ' - eep',
             description: data.description,
-            url: 'https://ne-doko.vercel.app/blog/post' + '/' + blogid,
+            url: 'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid,
             siteName: 'ne-doko',
             locale: 'ja_JP',
             type: 'website',

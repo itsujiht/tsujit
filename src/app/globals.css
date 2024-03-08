@@ -110,9 +110,21 @@ span {
 }
 
 .home-logo {
-  height: 5vmin;
+  height: 30px;
   width: auto;
   pointer-events: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.not-found {
+  margin: auto;
+  align-items: center;
+  text-align: center;
 }
 
 .home {
@@ -177,8 +189,7 @@ span {
 }
 
 .App-main {
-  margin: 80px 5% 30px;
-  height: 100%;
+  margin: 60px 5% 40px;
 }
 
 .App-main a:link {
@@ -222,6 +233,7 @@ span {
   color: #000000;
   margin: 10px auto;
   padding: 30px;
+  margin-top: auto;
 }
 
 .App-footer p{
@@ -322,7 +334,8 @@ span {
 }
 
 .blog-container {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,11 +343,10 @@ span {
 
 .blog-card {
   width: 100%;
-  margin: 10px;
+  margin: 13px;
   background-color: #fff;
   color: #000;
   overflow: hidden;
-  border: 1px dotted #e1e1e1;
   box-shadow: 5px 5px 0 0 #c7bcd3;
 }
 
@@ -351,15 +363,20 @@ span {
 }
 
 .blog-description p {
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin: 10px 15px 0 15px;
+  font-size: 15px;
+  line-height: 180%;
+  height: calc(1em * 1.8);
+  color: #777;
+  margin: 10px 15px 10px 15px;
 }
 
 .blog-date p {
   color: #999;
   text-align: right;
-  margin: 0 15px 10px 10px;
+  margin: 10px 15px 10px 10px;
 }
 
 .blog-intro h1 {
@@ -432,6 +449,15 @@ span {
 
 .blog-content a:hover {
   color: #8b8196;
+}
+
+.blog-outro {
+  margin-left: 1%; 
+}
+
+.blog-outro p {
+  color: #999;
+  font-size: 0.9em;
 }
 
 .image-sheep {
