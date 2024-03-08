@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 
-const Greeting = () => {
-    const [currentTime, setCurrentTime] = useState<Date | null>(null);
+const Greeting = ({now}: {now: Date}) => {
+    const [currentTime, setCurrentTime] = useState<Date | null>(now);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -26,14 +26,16 @@ const Greeting = () => {
             } else {
                 greet = 'こんばんは'
             }
-            return greet + '　おやすみなさい';
+            return greet;
         }
     }
 
     return (
         <div>
-            {getGreeting() !== null && <p>{getGreeting()}</p>}
-            {currentTime !== null && <p style={{color: '#626262' }}>time: {currentTime.toLocaleTimeString()}</p>}
+            {getGreeting() !== null && <p>{getGreeting() + '　🐏です'}</p>}
+            {/*
+                currentTime !== null && <p style={{color: '#626262' }}>time: {currentTime.toLocaleTimeString()}</p>
+            */}
         </div>
     );
 };

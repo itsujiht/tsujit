@@ -5,7 +5,7 @@ date: 1900-01-01
 description: about me
 ---
 
-プロフィールを書いてみた。加ひつじ項なし(嘘)
+<span>プロフィールを書いてみた。</span><span>加ひつじ項なし(嘘)</span>
 
 ## 基本情報
 - 🐏 / ひつじ / nemuSheep などの名前
