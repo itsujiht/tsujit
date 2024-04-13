@@ -4,8 +4,9 @@ import img1 from './picture/homura.png';
 import img2 from './picture/Mercury.png';
 import img3 from './picture/ぼきた.png';
 import img4 from './picture/緒山まひろ.png';
+import img5 from './picture/Frieren.png';
 
-export const images = [
+const images = [
     {
         title: 'アイコン(2024/1/26〜)',
         description: 'シンプルな塗りでいい感じに描けて満足',
@@ -41,4 +42,15 @@ export const images = [
         alt: 'まひろ',
         date: '2023-05-12',
     },
+    {
+        title: 'フリーレンさん',
+        description: 'ちょっとアイプチさせました',
+        src: img5,
+        alt: 'Frieren',
+        date: '2024-04-14',
+    },
 ];
+
+images.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+
+export { images };
