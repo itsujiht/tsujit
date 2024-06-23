@@ -62,6 +62,9 @@ export default async function BlogHome({ params }: { params: { pageid: number } 
 
     return (
         <div className='App-blog'>
+            <div className='page-desc'>
+                <h1>記事一覧</h1>
+            </div>
             <div className='blog-container'>
                 {
                     posts.map((post, index) => (

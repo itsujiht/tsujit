@@ -7,6 +7,7 @@ import Image from 'next/image';
 import ShareButton from '@/components/ShareButton';
 import Script from "next/script";
 import { Tweet } from '@/components/Tweet';
+import Link from 'next/link';
 import '@/app/globals.css';
 
 function formatDate(date: Date, isUS: boolean) {
@@ -75,6 +76,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
                 <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
                 <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
             </div>
+            <Link href='/blog/1' className='back-to-top'>一覧へ</Link>
         </div>
     );
 }
