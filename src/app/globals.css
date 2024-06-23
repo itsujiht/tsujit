@@ -214,7 +214,6 @@ span {
 }
 
 .App-main-blog {
-  background-color: #fff;
   margin: 70px 5% 30px;
   padding-bottom: 30px;
   border-radius: 15px;
@@ -256,6 +255,7 @@ span {
   padding: 40px;
   padding-bottom: 60px;
   margin-top: auto;
+  z-index: 100;
 }
 
 .App-footer p{
@@ -358,6 +358,12 @@ span {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 113.5px * 2);
+}
+
+.blog-wrapper {
+  background-color: #fff;
+  padding-bottom: 30px;
+  border-radius: 15px;
 }
 
 .page-desc {
@@ -550,7 +556,31 @@ span {
 
 .page-sep {
   display: flex;
-  flex-direction: column;
+}
+
+.blog-page-list {
+  display: none;
+}
+
+@media (min-width:850px) {
+  .App-main-blog {
+    margin-right: 35%;
+  }
+
+  .blog-page-list {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 85vh;
+    overflow-y: scroll;
+    min-width: 25%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px 20px 20px 20px;
+    margin: 70px 5% 60px 0;
+    z-index: 10;
+  }
 }
 
 .image-sheep {
@@ -650,11 +680,5 @@ span {
   .App-blog, .App-about {
     width: 100%;
     margin: 0;
-  }
-}
-
-@media (min-width: 850px) {
-  .App-main-blog {
-    margin: 70px 30% 30px 5%;
   }
 }

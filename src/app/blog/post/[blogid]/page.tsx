@@ -64,17 +64,39 @@ export default async function Post({ params }: { params: { blogid: string } }){
     const { data, content } = matter(post);
 
     return (
-        <div className='App-blog'>
-            <div className='blog-intro'>
-                <h1>{data.title}</h1>
-                <p>{formatDate(data.date, true)}</p>
+        <div className='page-sep'>
+            <div className='App-main-blog'>
+                <div className='blog-wrapper'>
+                    <div className='App-blog'>
+                        <div className='blog-intro'>
+                            <h1>{data.title}</h1>
+                            <p>{formatDate(data.date, true)}</p>
+                        </div>
+                        <div className='blog-content'>
+                            <MDXRemote source={content} components={components} />
+                        </div>
+                        <div className='blog-outro'>
+                            <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
+                            <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='blog-content'>
-                <MDXRemote source={content} components={components} />
-            </div>
-            <div className='blog-outro'>
-                <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
-                <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
+            <div className='blog-page-list'>
+                <h2>header list</h2>
+                {
+                    [0, 1, 2, 3, 4].map((num, index) => (
+                        <div key={index}>
+                            {
+                                [0, 1, 2, 3, 4].map((nuM, jndex) => (
+                                    <div key={jndex}>
+                                        <p>{num}, {nuM}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    ))
+                }
             </div>
         </div>
     );
