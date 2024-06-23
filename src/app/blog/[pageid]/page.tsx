@@ -61,6 +61,7 @@ export default async function BlogHome({ params }: { params: { pageid: number } 
     const posts = chunkedPosts[currentPage-1];
 
     return (
+        <div className='page-sep'>
         <div className='App-blog'>
             <div className='page-desc'>
                 <h1>記事一覧</h1>
@@ -129,6 +130,10 @@ export default async function BlogHome({ params }: { params: { pageid: number } 
                     )
                 }
             </div>
+        </div>
+        <div className='blog-page-list'>
+            abc
+        </div>
         </div>
     );
 }

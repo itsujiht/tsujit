@@ -47,7 +47,7 @@ export default function BlogContentLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div>
+        <div className='App-main-blog'>
             {children}
         </div>
     );

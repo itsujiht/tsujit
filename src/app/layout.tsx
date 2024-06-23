@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="App">
-          <div className="App-main">
+          <div>
             {children}
           </div>
           <Header />

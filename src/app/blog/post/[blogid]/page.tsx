@@ -76,7 +76,6 @@ export default async function Post({ params }: { params: { blogid: string } }){
                 <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
                 <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
             </div>
-            <Link href='/blog/1' className='back-to-top'>一覧へ</Link>
         </div>
     );
 }

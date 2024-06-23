@@ -27,7 +27,7 @@ export default function AboutLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div>
+        <div className='App-main'>
             {children}
         </div>
     );

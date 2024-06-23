@@ -213,6 +213,28 @@ span {
   text-decoration: underline;
 }
 
+.App-main-blog {
+  background-color: #fff;
+  margin: 70px 5% 30px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+}
+
+.App-main-blog a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.App-main-blog a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+.App-main-blog a:hover {
+  color: #626262;
+  text-decoration: underline;
+}
+
 .greet {
   margin: 20px auto 20px auto;
 }
@@ -339,7 +361,11 @@ span {
 }
 
 .page-desc {
-  margin: 30px auto 20px auto;
+  margin: 20px auto 20px auto;
+}
+
+.page-desc h1 {
+  padding-top: 30px;
 }
 
 .blog-container {
@@ -522,16 +548,9 @@ span {
   font-size: 0.9em;
 }
 
-.back-to-top {
-  width: 60px;
-  text-align: center;
-  border-radius: 48%;
-  border: 2px solid #332f38;
-  background-color: #332f38;
-  font-family: sans-serif;
-  font-size: 15px;
-  margin: auto auto 10px;
-  color: #fff !important;
+.page-sep {
+  display: flex;
+  flex-direction: column;
 }
 
 .image-sheep {
@@ -543,11 +562,11 @@ span {
 }
 
 .App-illust {
-  width: 100%;
+  width: 95%;
   background-color: #ffffff;
   text-align: center;
   line-height: 35px;
-  margin: 0 auto;
+  margin: 0px auto auto auto;
 }
 
 .App-illust p {
@@ -631,5 +650,11 @@ span {
   .App-blog, .App-about {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (min-width: 850px) {
+  .App-main-blog {
+    margin: 70px 30% 30px 5%;
   }
 }
