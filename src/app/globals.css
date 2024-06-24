@@ -540,6 +540,9 @@ span {
 
 .blog-content a {
   color: #332f38;
+  display: block;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 
 .blog-content a:hover {
