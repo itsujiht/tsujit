@@ -217,6 +217,7 @@ span {
   margin: 70px 5% 30px;
   padding-bottom: 30px;
   border-radius: 15px;
+  width: 90%;
 }
 
 .App-main-blog a:link {
