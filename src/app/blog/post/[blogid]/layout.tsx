@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: {blogid: string}}):
     const metadata: Metadata = {
         title: data.title + ' - eep',
         description: data.description,
+        metadataBase: new URL('https://ne-doko.vercel.app' + '/' + params.blogid),
         openGraph: {
             title: data.title + ' - eep',
             description: data.description,

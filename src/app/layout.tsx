@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ne doko - eep",
   description: "web site of nemuSheep",
+  metadataBase: new URL('https://ne-doko.vercel.app'),
   openGraph: {
     title: 'ne doko - eep',
     description: 'web site of nemuSheep',

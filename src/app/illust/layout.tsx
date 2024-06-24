@@ -4,6 +4,7 @@ import '@/app/globals.css';
 export const metadata: Metadata = {
     title: "illust - eep",
     description: "illustration of nemuSheep",
+    metadataBase: new URL('https://ne-doko.vercel.app/illust'),
     openGraph: {
         title: 'illust - eep',
         description: 'illustration of nemuSheep',

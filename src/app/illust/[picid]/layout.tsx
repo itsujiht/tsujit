@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: { params: {picid: number}}): 
     const metadata: Metadata = {
         title: images[picid].title + ' - eep',
         description: images[picid].description,
+        metadataBase: new URL('https://ne-doko.vercel.app/illust' + '/' + picid),
         openGraph: {
             title: images[picid].title + ' - eep',
             description: 'illustration of nemuSheep',
