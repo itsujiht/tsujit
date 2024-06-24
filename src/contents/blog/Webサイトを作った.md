@@ -39,7 +39,7 @@ description: Next.jsでWebサイトを作った。なんもわかってないけ
 Dynamic Routingによって\[pageid](記事一覧のページネーション)、\[blogid]、\[picid]は適切なページのパスとして置き換えられる。  
 詳しくは[githubのリポジトリ](https://github.com/nemusheep/ne-doko)を参照。
 <br />
-<a id='わかっていない部分'></a>
+<a id='わかってない部分'></a>
 
 ### わかってない部分
 - markdown、MDXで書いた記事はnext-mdx-remote/rscのMDXRemoteによってレンダリングするようにしているが、serializeしたソースをnext-mdx-remoteのMDXRemoteでしようとするとuseEffectがエラーを起こした。そもそもそれぞれの処理が何をしているかわかっていないので原因もわからない。

@@ -214,10 +214,10 @@ span {
 }
 
 .App-main-blog {
-  margin: 70px 5% 30px;
+  margin: 70px 2.5% 30px;
   padding-bottom: 30px;
   border-radius: 15px;
-  width: 90%;
+  width: 95%;
 }
 
 .App-main-blog a:link {
@@ -270,6 +270,8 @@ span {
 .App-home {
   background-color: #ffffff;
   text-align: center;
+  width: 95%;
+  margin: auto;
 }
 
 .App-home h1 {
@@ -568,7 +570,7 @@ span {
 
 @media (min-width:850px) {
   .App-main-blog {
-    margin-right: 35%;
+    margin-right: 30%;
   }
 
   .blog-page-list {
@@ -576,14 +578,34 @@ span {
     position: fixed;
     top: 0;
     right: 0;
-    height: 85vh;
     overflow-y: scroll;
     min-width: 25%;
+    max-width: 25%;
+    overflow-x: hidden;
+    white-space: nowrap;
     background-color: #fff;
+    color: #5b5b5b;
     border-radius: 15px;
-    padding: 30px 20px 20px 20px;
-    margin: 70px 5% 60px 0;
+    padding: 30px 20px 30px 20px;
+    margin: 70px 2.5% 60px 0;
     z-index: 10;
+  }
+
+  .blog-page-list h2 {
+    margin-top: 0px;
+  }
+
+  .blog-contents-list {
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .blog-contents-list p {
+    font-size: 14px;
+    line-height: 105%;
+    height: calc(1em * 1.05);
   }
 }
 
