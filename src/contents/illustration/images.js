@@ -5,6 +5,7 @@ import img2 from './picture/Mercury.png';
 import img3 from './picture/ぼきた.png';
 import img4 from './picture/緒山まひろ.png';
 import img5 from './picture/Frieren.png';
+import img6 from './picture/トランセンド.png;'
 
 const images = [
     {
@@ -48,6 +49,13 @@ const images = [
         src: img5,
         alt: 'Frieren',
         date: '2024-04-14',
+    },
+    {
+        title: 'トランセンド',
+        description: 'メガネを外すな',
+        src: img6,
+        alt: 'Transcend',
+        date: '2024-06-30',
     },
 ];
 
