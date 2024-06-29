@@ -5,7 +5,7 @@ import img2 from './picture/Mercury.png';
 import img3 from './picture/ぼきた.png';
 import img4 from './picture/緒山まひろ.png';
 import img5 from './picture/Frieren.png';
-import img6 from './picture/トランセンド.png;'
+import img6 from './picture/トランセンド.png';
 
 const images = [
     {
