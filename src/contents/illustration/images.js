@@ -19,14 +19,14 @@ const images = [
         title: '暁美ほむら',
         description: '眼鏡かけてる方が好きだったりします',
         src: img1,
-        alt: '暁美ほむら',
+        alt: 'homura',
         date: '2022-04-07',
     },
     {
         title: 'スレったマーキュリー',
         description: '今見てもいい顔に描けているなあと思う',
         src: img2,
-        alt: 'スレミオのスレ',
+        alt: 'Mercury',
         date: '2022-11-06',
     },
     {
@@ -40,7 +40,7 @@ const images = [
         title: '緒山まひろ',
         description: 'かわいいね',
         src: img4,
-        alt: 'まひろ',
+        alt: '緒山まひろ',
         date: '2023-05-12',
     },
     {
@@ -54,7 +54,7 @@ const images = [
         title: 'トランセンド',
         description: 'メガネを外すな',
         src: img6,
-        alt: 'Transcend',
+        alt: 'transcend',
         date: '2024-06-30',
     },
 ];

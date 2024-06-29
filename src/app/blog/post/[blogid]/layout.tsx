@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: { params: {blogid: string}}):
     const metadata: Metadata = {
         title: data.title + ' - eep',
         description: data.description,
-        metadataBase: new URL('https://ne-doko.vercel.app' + '/' + params.blogid),
+        metadataBase: new URL('https://ne-doko.vercel.app' + '/' + encodeURIComponent(blogid)),
         openGraph: {
             title: data.title + ' - eep',
             description: data.description,
-            url: 'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid,
+            url: 'https://ne-doko.vercel.app/blog/post' + '/' + encodeURIComponent(blogid),
             siteName: 'ne-doko',
             locale: 'ja_JP',
             type: 'website',
