@@ -133,7 +133,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
                     headers.map((prop, index) => (
                         <div key={index} className='blog-contents-list'>
                             <a href={'#' + prop.text}>
-                                <p style={{fontWeight: 800 - prop.depth*100}}>
+                                <p style={{fontWeight: 800 - prop.depth*50}}>
                                     <span style={{marginLeft: (prop.depth-2)*3 + 'px',
                                         marginRight: '10px'
                                     }}>{frontMark(prop.depth)}</span>
