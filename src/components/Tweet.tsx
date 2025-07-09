@@ -23,5 +23,5 @@ const generateEmbedHtml = (id: string): string => {
         throw new Error(`Invalid tweet ID: ${id}`);
     }
 
-    return `<blockquote class="twitter-tweet"><a href="https://twitter.com/mesheep_sleep/status/${id}"></a></blockquote>`;
+    return `<blockquote class="twitter-tweet"><a href="https://twitter.com/_itsujih/status/${id}"></a></blockquote>`;
 };

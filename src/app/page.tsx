@@ -11,14 +11,14 @@ export default function Home() {
             <div className='App-home'>
                 <div className='page-desc'>
                     <h1>
-                        寝床
+                        Takuto Tsuji's web site
                     </h1>
                 </div>
                 <div className='greet'>
                     <Greeting now={new Date()}/>
                 </div>
                 <div className="tweet">
-                    <Tweet id="1638589333744779264" />
+                    <Tweet id="1943008602522095852" />
                     <Script src="https://platform.twitter.com/widgets.js"
                         strategy="lazyOnload"
                     />

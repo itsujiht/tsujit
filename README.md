@@ -1,2 +1,2 @@
-# ne-doko
-detail : https://ne-doko.vercel.app/blog/post/このサイトについて
+# tsujit web site
+detail : https://tsujit.vercel.app/blog/post/このサイトについて

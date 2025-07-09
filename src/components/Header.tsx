@@ -8,7 +8,7 @@ function Header() {
         <header className='App-header'>
             <Link href='/' className='home'>
                     <Image src={sheepicon} className='home-logo' alt='logo' />
-                    <div className='home-name'>ne-doko-eep</div>
+                    <div className='home-name'>tsujit web</div>
             </Link>
             <nav className='menu'>
                 <div className='menu-item'>

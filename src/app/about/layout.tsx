@@ -2,23 +2,23 @@ import type { Metadata } from 'next';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
-    title: "about - eep",
-    description: "about nemuSheep",
-    metadataBase: new URL('https://ne-doko.vercel.app/about'),
+    title: "about me",
+    description: "about tsujit",
+    metadataBase: new URL('https://tsujit.vercel.app/about'),
     openGraph: {
-        title: 'about - eep',
-        description: 'about nemuSheep',
-        url: 'https://ne-doko.vercel.app/about',
-        siteName: 'ne-doko',
+        title: 'about mw',
+        description: 'about tsujit',
+        url: 'https://tsujit.vercel.app/about',
+        siteName: 'tsujit',
         locale: 'ja_JP',
         type: 'website',
     },
     twitter: {
         card: 'summary',
-        title: 'about - eep',
-        description: 'about nemuSheep',
-        site: '@mesheep_sleep',
-        creator: '@mesheep_sleep',
+        title: 'about me',
+        description: 'about tsujit',
+        site: '@myn_Mei',
+        creator: '@myn_Mei',
     },
   };
   

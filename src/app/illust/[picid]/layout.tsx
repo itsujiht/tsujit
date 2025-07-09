@@ -10,24 +10,24 @@ export async function generateMetadata({ params }: { params: {picid: number}}): 
     }
 
     const metadata: Metadata = {
-        title: images[picid].title + ' - eep',
+        title: images[picid].title + ' by tsujit',
         description: images[picid].description,
-        metadataBase: new URL('https://ne-doko.vercel.app/illust' + '/' + picid),
+        metadataBase: new URL('https://tsujit.vercel.app/illust' + '/' + picid),
         openGraph: {
-            title: images[picid].title + ' - eep',
-            url: 'https://ne-doko.vercel.app/illust' + '/' + picid,
-            siteName: 'ne-doko',
+            title: images[picid].title + ' by tsujit',
+            url: 'https://tsujit.vercel.app/illust' + '/' + picid,
+            siteName: 'tsujit',
             locale: 'ja_JP',
             type: 'website',
         },
         twitter: {
             card: 'summary',
-            title: images[picid].title + ' - eep',
-            site: '@mesheep_sleep',
+            title: images[picid].title + ' by tsujit',
+            site: '@myn_Mei',
             creator: '@myn_Mei',
             images: [ 
                 {
-                  url: 'https://github.com/nemusheep/ne-doko/blob/main/src/contents/illustration/picture/' + encodeURIComponent(images[picid].alt) + '.png',
+                  url: 'https://github.com/itsujiht/tsujit/blob/main/src/contents/illustration/picture/' + encodeURIComponent(images[picid].alt) + '.png',
                   width: 1200,
                   height: 630,
                 },

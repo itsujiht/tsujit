@@ -671,7 +671,7 @@ span {
 }
 
 .illust-card img {
-  width: 80%;
+  width: 85%;
   height: auto;
   max-width: 370px;
   min-width: 300px;
@@ -681,6 +681,25 @@ span {
 .illust-card-content {
   flex-grow: 1;
   margin: 20px 0 20px 0;
+}
+
+.illust-card-landscape {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  height: 20%;
+  width: auto;
+  margin: 25px 0 25px 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+.illust-card-landscape img {
+  width: 85%;
+  height: auto;
+  margin-right: 20px;
+  margin-right: 0;
+  margin-bottom: 10px;
 }
 
 @media (max-width:700px) {

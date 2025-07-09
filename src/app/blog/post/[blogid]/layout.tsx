@@ -19,23 +19,23 @@ export async function generateMetadata({ params }: { params: {blogid: string}}):
     const { data } = matter(post);
 
     const metadata: Metadata = {
-        title: data.title + ' - eep',
+        title: data.title + ' by tsujit',
         description: data.description,
-        metadataBase: new URL('https://ne-doko.vercel.app' + '/' + encodeURIComponent(blogid)),
+        metadataBase: new URL('https://tsujit.vercel.app/blog/post' + '/' + encodeURIComponent(blogid)),
         openGraph: {
             title: data.title + ' - eep',
             description: data.description,
-            url: 'https://ne-doko.vercel.app/blog/post' + '/' + encodeURIComponent(blogid),
-            siteName: 'ne-doko',
+            url: 'https://tsujit.vercel.app/blog/post' + '/' + encodeURIComponent(blogid),
+            siteName: 'tsujit',
             locale: 'ja_JP',
             type: 'website',
         },
         twitter: {
             card: 'summary',
-            title: data.title + ' - eep',
+            title: data.title + ' by tsujit',
             description: data.description,
-            site: '@mesheep_sleep',
-            creator: '@mesheep_sleep',
+            site: '@myn_Mei',
+            creator: '@myn_Mei',
         },
     };
 

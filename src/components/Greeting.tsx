@@ -20,7 +20,7 @@ const Greeting = ({now}: {now: Date}) => {
             return null;
         } else {
             if (hour >= 6 && hour < 12) {
-                greet = 'おはよう';
+                greet = 'おはようございます';
             } else if (hour >= 12 && hour < 18) {
                 greet = 'こんにちは'
             } else {
@@ -32,7 +32,7 @@ const Greeting = ({now}: {now: Date}) => {
 
     return (
         <div>
-            {getGreeting() !== null && <p>{getGreeting() + '　🐏です'}</p>}
+            {getGreeting() !== null && <p>{getGreeting() + '。　ご覧いただきありがとうございます。'}</p>}
             {/*
                 currentTime !== null && <p style={{color: '#626262' }}>time: {currentTime.toLocaleTimeString()}</p>
             */}

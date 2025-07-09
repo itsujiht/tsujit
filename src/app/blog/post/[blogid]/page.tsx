@@ -60,7 +60,6 @@ const components = {
             />
         )
     }
-    //LinkcardとかCodeblockとか作りたい
 };
 
 export default async function Post({ params }: { params: { blogid: string } }){
@@ -77,7 +76,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
     
     const { data, content } = matter(post);
 
-    //headerを抽出
+    //header
     const extractHeader = (content: string): Header[] => {
         const tree = remark().use(remarkParse).parse(content)
         const headers: Header[] = [];
@@ -122,7 +121,7 @@ export default async function Post({ params }: { params: { blogid: string } }){
                         </div>
                         <div className='blog-outro'>
                             <p>{data.author + ' - ' + formatDate(data.date, false)}</p>
-                            <ShareButton text={data.title} url={'https://ne-doko.vercel.app/blog/post' + '/' + params.blogid} />
+                            <ShareButton text={data.title} url={'https://tsujit.vercel.app/blog/post' + '/' + params.blogid} />
                         </div>
                     </div>
                 </div>
