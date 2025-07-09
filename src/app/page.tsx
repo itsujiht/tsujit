@@ -11,7 +11,7 @@ export default function Home() {
             <div className='App-home'>
                 <div className='page-desc'>
                     <h1>
-                        Takuto Tsuji's web site
+                        Takuto Tsuji&apos;s web site
                     </h1>
                 </div>
                 <div className='greet'>
